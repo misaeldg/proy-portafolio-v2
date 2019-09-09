@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Crimson+Pro|Kanit|Modak|Roboto&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+}
+
+
+.header{
+    width:100%;
+    height:650px;
+    display: grid;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('../images/camera.jpg');
+    
+    background-size: 100% 100%;
+    border: 1px solid red;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    box-sizing: border-box;
+}
+
+.header_menu{
+    grid-column: 2 / -2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+
+}
+.header_menu p{
+    display: flex;
+    margin: 0;
+    margin-left: 10%;
+    font-family: 'Roboto';
+    color: white;
+    align-self: center;
+    font-size: 50px;
+}
+.header_menu span{
+    margin-right: 20px;
+    font-size:35px;
+}
+.header_menu span{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+
+.header_description{
+    grid-column: 2 / -2;
+    grid-row: 4 / 8;
+}
+
+.header_description p{
+    padding: 0;
+    margin:0;
+    color: white;
+}
+.header_description p:nth-child(1){
+    font-family: 'Acme';
+    font-size: 60px;
+}
+.header_description p:nth-child(2){
+    font-family: 'Bree Serif';
+    font-size: 25px;
+    position: relative;
+}
+.header_description p:nth-child(2)::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 2px;
+    background: white;
+}
+
+.header_description p:nth-child(3), p:nth-child(4){
+    display: block;
+    width: 60%;
+    margin-top: 20px;
+    font-family: 'Acme';
+}
+
+.header_description span{
+    font-size: 20px;
+    background: white;
+    color: black;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.header_description__botones div{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border:1px solid white;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Roboto';
+}
+.header_description__botones div:hover{
+    background: white;
+    color: black;
+    transition: 1.2s;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .header_menu{
+        grid-column: 1 / -1;
+    }
+    .header_description{
+        grid-row: 3 / 6;
+    }
+    .header_description p:nth-child(1){
+        font-size: 30px;
+    }
+    .header_description p:nth-child(3), p:nth-child(4){
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        font-family: 'Acme';
+    }
+    .header_menu p, span{
+        font-size: 20px;
+    }
+  }
